@@ -1,0 +1,38 @@
+# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
+# For more information see: https://github.com/actions/setup-java#apache-maven-with-a-settings-path
+
+name: UIBOT
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+        settings-path: ${{ github.workspace }} # location for the settings.xml file
+
+    - name: Set up google-chrome-stable_current
+      run: ｜
+       wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+       sudo apt install ./google-chrome-stable_current_amd64.deb
+       
+    - name: Set up tagui v6.14
+      run: ｜
+       wget -d https://github.com/kelaberetiv/TagUI/releases/download/v6.14.0/TagUI_Linux.zip
+       unzip TagUI_Linux.zip
+
+       
+    - name: Startup UIBot
+      run: tagui/tagui demo.tag
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
