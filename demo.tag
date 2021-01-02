@@ -1,18 +1,30 @@
-// This flow visits a GitHub page, reads some info from the page and makes a download
+//https://github.com/kelaberetiv/TagUI/blob/master/src/test/positive_test.tag
 
 // Visit the webpage
-https://github.com/kelaberetiv/TagUI
+https://weixin.sogou.com
 
-// Save the text from the element using XPath and calls it 'license_type',
+type query as '乐曲多'
+click (//*[@id="scroll-header"]/form/div/input[2])
+
+
+// Save the text from the element using XPath and calls it 'em_weixinhao',
 // then show it on the console
-// Learn XPath: https://www.w3schools.com/xml/xpath_intro.asp
-read (//*[@class="mt-3"])[3] to license_type
-echo `license_type`
+read (//*[@id="sogou_vr_11002301_box_0"]/div/div[2]/p[2]/label) to em_weixinhao
+echo `em_weixinhao`
 
-// Look on the web page for an element with unique attributes provided
-// Then click to download a file to the current flow's folder
-click octicon-download
-click octicon-file-zip
+
+click (//*[@id="sogou_vr_11002301_box_0"]/dl[2]/dd/a)
+// Wait 3 seconds to give the download time to complete on slow networks 
+wait 3
+
+// test title function
+echo `title()`
+if title() contains em_weixinhao
+    snap element to demo_`em_weixinhao`.png
+    
+snap page to demo_0.png
+click (//*[@id="js_content"]/p[2]/span/em/strong/a)
+snap page to demo_1.png
 
 // Wait 15 seconds to give the download time to complete on slow networks 
-wait 15
+wait 5
