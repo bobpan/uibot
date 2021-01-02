@@ -2,7 +2,7 @@
 
 // Visit the webpage
 https://weixin.sogou.com
-
+echo `title()`
 type query as [clear]乐曲多[enter]
 snap page to demo_start.png
 
@@ -19,7 +19,7 @@ wait 3
 
 // test title function
 echo `title()`
-if title() contains `em_weixinhao`
+//if title() contains `em_weixinhao`
 //    snap element to demo_`em_weixinhao`.png
 snap page to demo_0.png
 
