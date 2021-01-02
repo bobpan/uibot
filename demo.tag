@@ -16,7 +16,7 @@ snap page to demo_start.png
 
 //click (//*[@id="sogou_vr_11002301_box_0"]/dl[2]/dd/a)
 // Wait 3 seconds to give the download time to complete on slow networks 
-wait 3
+wait 11
 
 // test title function
 echo `title()`
@@ -27,7 +27,7 @@ snap page to demo_0.png
 //click (//*[@id="js_content"]/p[2]/span/em/strong/a)
 snap page to demo_1.png
 
-//move (//*[@id="js_related_container"]/div/div/div[1])
+move (//*[@id="js_related_container"])
 snap page to demo_2.png
 
 // Wait 15 seconds to give the download time to complete on slow networks 
