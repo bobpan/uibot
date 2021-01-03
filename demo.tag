@@ -2,7 +2,8 @@
 
 // Visit the webpage
 //https://weixin.sogou.com
-https://mp.weixin.qq.com/s?src=11&timestamp=1609608308&ver=2804&signature=SFuX2vVaDoyFGzlXXg0cE8fo8AoIovbJEV9es6i8ri04Cz9iIN3QK5LieybwNRl8-qhG9jX5sXb2lfgPHSeB8K1s0mYP47kIdCAoZvCrU2VkmL6sR4PCbNNPUKIT6FvP&new=1
+https://mp.weixin.qq.com/s/7zHiUfXtaNAwA-Wrb80hLA
+
 echo `title()`
 //type query as [clear]乐曲多[enter]
 snap page to demo_start.png
