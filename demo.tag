@@ -24,11 +24,11 @@ echo `js_name`
 
 click (//*[@id="js_name"])
 wait 9
-snap page to /logs/js_name.png
+snap page to logs/js_name.png
 wait 100
 
 move (//*[@id="js_related_container"])
-snap page to /logs/js_related_container.png
+snap page to logs/js_related_container.png
 wait 50
 
 move (//*[@id="js_name"])
@@ -38,5 +38,5 @@ move (//*[@id="js_related_container"])
 wait 50
 
 move (//*[@id="js_name"])
-snap page to /logs/end.png
+snap page to logs/end.png
 wait 50
