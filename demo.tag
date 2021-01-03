@@ -27,7 +27,7 @@ snap page to demo_0.png
 //click (//*[@id="js_content"]/p[2]/span/em/strong/a)
 snap page to demo_1.png
 
-move (//*[@id="js_related_container"])
+//move (//*[@id="js_related_container"])
 snap page to demo_2.png
 
 // Wait 15 seconds to give the download time to complete on slow networks 
