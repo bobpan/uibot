@@ -43,8 +43,11 @@ jobs:
         uses: wei/wget@v1.1.1
         with:
           args: -O tagui.zip https://github.com/kelaberetiv/TagUI/releases/download/v6.14.0/TagUI_Linux.zip
-      - run: unzip tagui.zip
-      - run: ./tagui/src/tagui demo.tag -h -r
+      - name: Startup tagui automation
+        run: |
+          unzip tagui.zip
+          mkdir logs 
+          ./tagui/src/tagui demo.tag -h -r
       - name: Upload logs
         uses: actions/upload-artifact@v2
         with:
