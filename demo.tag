@@ -6,7 +6,7 @@ https://mp.weixin.qq.com/s/7zHiUfXtaNAwA-Wrb80hLA
 
 echo `title()`
 //type query as [clear]乐曲多[enter]
-snap page to demo_start.png
+//snap page to demo_start.png
 
 
 // Save the text from the element using XPath and calls it 'em_weixinhao',
@@ -15,21 +15,28 @@ snap page to demo_start.png
 //echo `em_weixinhao`
 
 
-//click (//*[@id="sogou_vr_11002301_box_0"]/dl[2]/dd/a)
-wait 11
 
 // test title function
 echo `title()`
-//if title() contains `em_weixinhao`
-//    snap element to demo_`em_weixinhao`.png
-snap page to demo_0.png
-wait 150
 
-//click (//*[@id="js_content"]/p[2]/span/em/strong/a)
-snap page to demo_1.png
+read (//*[@id="js_name"]) to js_name
+echo `js_name`
+
+click (//*[@id="js_name"])
+wait 9
+snap page to /logs/js_name.png
+wait 100
 
 move (//*[@id="js_related_container"])
-snap page to demo_2.png
+snap page to /logs/js_related_container.png
+wait 50
 
-// Wait 50 seconds to give the download time to complete on slow networks 
+move (//*[@id="js_name"])
+wait 50
+
+move (//*[@id="js_related_container"])
+wait 50
+
+move (//*[@id="js_name"])
+snap page to /logs/end.png
 wait 50
