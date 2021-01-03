@@ -49,14 +49,13 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: logs
-          path: demo*
+          path: /logs/*
       - name: Check Result
         run: ls
         
   check_workspace:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - run: pwd
       - run: ls
       - run: ifconfig
