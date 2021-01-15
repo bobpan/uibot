@@ -3,7 +3,7 @@
 
 https://bilibili.com
 
-echo `title()`
+echo `title()` `keyword`
 type (//*[@id="nav_searchform"]/input) as [clear]`keyword`
 click (//*[@id="nav_searchform"]/div/button)
 
@@ -27,6 +27,7 @@ popup video
     click (//*[@id="bilibiliPlayer"]/div[1]/div[1]/div[10]/div[2]/div[2]/div[1]/div[1]/button)
     wait 60
     js r = Math.ceil(Math.random()*60)
-    wait `r`
+    echo `r`s
+    wait r
     //click (//*[@id="v_upinfo"]/div[2]/div[1]/a[1])
     }
