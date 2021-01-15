@@ -8,8 +8,8 @@ on:
     branches: [ main ]
   release:
     types: [created]
-  schedule:
-  - cron: "1/5 * * * *" #UTC Time (减8)
+  #schedule:
+  #- cron: "1/5 * * * *" #UTC Time (减8)
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
   
