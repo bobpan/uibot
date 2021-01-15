@@ -49,7 +49,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ${{ matrix.os }}.${{ matrix.node-version }}.logs
-          path: *.log
+          path: /*.log
       - name: Check Result
         run: ls -l
         
