@@ -45,8 +45,9 @@ jobs:
       - name: Startup tagui automation
         run: |
           pwd
+          cd bilibili
           ls
-          ./tagui/src/tagui ./bilibili/bilibili.tag ./bilibili/searchKeys.csv
+          ../tagui/src/tagui bilibili.tag searchKeys.csv
       - name: Upload logs
         uses: actions/upload-artifact@v2
         with:
