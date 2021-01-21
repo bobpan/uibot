@@ -44,12 +44,14 @@ jobs:
       - run: unzip tagui.zip
       - name: Startup tagui automation
         run: |
-          ./tagui/src/tagui bilibili/bilibili.tag bilibili/searchKeys.csv
+          pwd
+          ls
+          ./tagui/src/tagui ./bilibili/bilibili.tag ./bilibili/searchKeys.csv
       - name: Upload logs
         uses: actions/upload-artifact@v2
         with:
           name: ${{ matrix.os }}.${{ matrix.node-version }}.logs
-          path: /*.log
+          path: logs/*.log
       - name: Check Result
         run: ls -l
         
