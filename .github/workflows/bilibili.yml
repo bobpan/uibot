@@ -45,14 +45,14 @@ jobs:
       - name: Startup tagui automation
         run: |
           pwd
-          cd bilibili
           ls
-          ../tagui/src/tagui bilibili.tag searchKeys.csv
+          cd bilibili
+          ls ../
       - name: Upload logs
         uses: actions/upload-artifact@v2
         with:
           name: ${{ matrix.os }}.${{ matrix.node-version }}.logs
-          path: logs/*.log
+          path: /*.log
       - name: Check Result
         run: ls -l
         
