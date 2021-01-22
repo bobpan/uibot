@@ -18,12 +18,12 @@ for n from 1 to cntItm
     echo `itmName`,`upName`,`upDate`
 
     if itmName equals to "凹凸妹寻"
-        echo biubiubiu
         read (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/a) to itmAnchor
-        echo `itmAnchor`
         click (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/a)
         read (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/a) to itmTitle
-        echo `itmTitle`
+        echo `itmTitle`.`itmAnchor`
+        if itmName equals to "`upName`"
+            echo biubiubiu
         break
 
 wait 5
@@ -36,6 +36,6 @@ popup video
     wait 60
     js r = Math.ceil(Math.random()*60)
     echo `r`s
-    wait r
+    wait (r * 1.0)
     //click (//*[@id="v_upinfo"]/div[2]/div[1]/a[1])
     }
