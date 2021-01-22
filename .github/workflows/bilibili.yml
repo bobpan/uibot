@@ -51,7 +51,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ${{ matrix.os }}.${{ matrix.node-version }}.logs
-          path: ./*
+          path: bilibili/*
       - name: Check Result
         run: ls -l
         
