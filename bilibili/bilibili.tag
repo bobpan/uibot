@@ -16,8 +16,11 @@ for n from 1 to cntItm
     read (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/div/div[3]/span[3]) to upDate
     read (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/div/div[3]/span[4]/a) to itmName
     echo `itmName`,`upName`,`upDate`
-
-    if itmName equals to upName
+    if `upName` equals to itmName
+        echo biu
+    if itmName equals to "凹凸妹寻"
+        echo biubiu
+    if `upName` equals to itmName
         echo biubiubiu
         read (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/a) to itmAnchor
         echo `itmAnchor`
