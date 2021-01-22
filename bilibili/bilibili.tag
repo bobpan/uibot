@@ -1,9 +1,9 @@
 //https://github.com/kelaberetiv/TagUI/blob/master/src/test/positive_test.tag
 //tagui bilibili.tag searchKeys.csv -q
 
-https://bilibili.com
+https://www.bilibili.com
 
-echo `url()` `title()` `keyword`
+echo `keyword`
 type (//*[@id="nav_searchform"]/input) as [clear]`keyword`
 click (//*[@id="nav_searchform"]/div/button)
 
@@ -24,7 +24,7 @@ popup search.bilibili.com
     }
 
 wait 5
-popup www.bilibili.com
+popup www.bilibili.com/video
     {
     wait
     echo `url()`
