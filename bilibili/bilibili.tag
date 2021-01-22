@@ -11,28 +11,26 @@ https://search.bilibili.com
 
 echo `keyword`
 type search-keyword as [clear]`keyword`[enter]
+wait 3
 echo `url()`
-click (//*[@id="server-search-app"]/div/div/div[2]/a)
+waiclick (//*[@id="server-search-app"]/div/div/div[2]/a)
+
+wait
 echo `url()`
+snap page to search.png
+cntItm = count('//*[@id="all-list"]/div[1]/div[2]/ul/li')
+for n from 1 to cntItm
+    read (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/div/div[3]/span[3]) to upDate
+    if upDate equal to "2020-01-10"
+        read (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/a) to imgAnchor
+        echo `imgAnchor`
+        click (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/a)
+        read (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/a) to link
+        echo `link`
+        break
 
 wait 5
-popup search.bilibili.com
-    {
-    wait
-    echo `url()`
-    snap page to search.png
-    cntItm = count('//*[@id="all-list"]/div[1]/div[2]/ul/li')
-    for n from 1 to cntItm
-        read (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/div/div[3]/span[3]) to upDate
-        if upDate equal to "2020-01-10"
-            read (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/a) to imgAnchor
-            echo `imgAnchor`
-            click (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/a)
-            break
-    }
-
-wait 5
-popup video
+popup www.bilibili.com
     {
     wait
     echo `url()`
