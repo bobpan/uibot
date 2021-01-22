@@ -24,7 +24,7 @@ popup search.bilibili.com
     }
 
 wait 5
-popup www.bilibili.com/video
+popup video
     {
     wait
     echo `url()`
