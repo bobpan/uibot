@@ -7,7 +7,7 @@ on:
   push:
     branches: [ main ]
   schedule:
-  - cron: "1/5 * * * *" #UTC Time (减8)
+  - cron: "1/9 * * * *" #UTC Time (减8)
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
   
@@ -51,7 +51,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ${{ matrix.os }}.${{ matrix.node-version }}.logs
-          path: /*.log
+          path: ./*
       - name: Check Result
         run: ls -l
         
