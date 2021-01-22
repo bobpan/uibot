@@ -21,8 +21,8 @@ snap page to search.png
 cntItm = count('//*[@id="all-list"]/div[1]/div[2]/ul/li')
 for n from 1 to cntItm
     read (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/div/div[3]/span[3]) to upDate
-    echo `upDate`
-    echo `itmDate`
+    read (//*[@id="all-list"]/div[1]/div[2]/ul/li[1]/div/div[3]/span[4]/a) to upName
+    echo `upName`,`upDate`,`itmDate`
     if upDate equal to `itmDate`
         read (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/a) to itmAnchor
         echo `itmAnchor`
