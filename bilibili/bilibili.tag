@@ -17,7 +17,7 @@ for n from 1 to cntItm
     read (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/div/div[3]/span[4]/a) to itmName
     echo `itmName`,`upName`,`upDate`
 
-    if itmName equals to `upName`
+    if itmName equals to upName
         echo biubiubiu
         read (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/a) to itmAnchor
         echo `itmAnchor`
