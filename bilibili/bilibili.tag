@@ -13,10 +13,10 @@ echo `keyword`
 type search-keyword as [clear]`keyword`[enter]
 wait 3
 echo `url()`
-waiclick (//*[@id="server-search-app"]/div/div/div[2]/a)
-
+click (//*[@id="server-search-app"]/div/div/div[2]/a)
 wait
 echo `url()`
+
 snap page to search.png
 cntItm = count('//*[@id="all-list"]/div[1]/div[2]/ul/li')
 for n from 1 to cntItm
