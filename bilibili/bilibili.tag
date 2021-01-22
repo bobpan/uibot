@@ -1,7 +1,10 @@
 //https://github.com/kelaberetiv/TagUI/blob/master/src/test/positive_test.tag
 //tagui bilibili.tag searchKeys.csv -q
 
-https://www.bilibili.com
+https://search.bilibili.com/all?keyword=`keyword`&from_source=nav_search_new
+echo `url()`
+
+//https://www.bilibili.com
 
 echo `keyword`
 type (//*[@id="nav_searchform"]/input) as [clear]`keyword`
