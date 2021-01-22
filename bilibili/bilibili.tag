@@ -24,6 +24,7 @@ for n from 1 to cntItm
     read (//*[@id="all-list"]/div[1]/div[2]/ul/li[1]/div/div[3]/span[4]/a) to upName
     echo `upName`,`upDate`,`itmDate`
     if upDate equal to `itmDate`
+        echo biubiubiu
         read (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/a) to itmAnchor
         echo `itmAnchor`
         click (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/a)
@@ -32,7 +33,7 @@ for n from 1 to cntItm
         break
 
 wait 5
-popup www.bilibili.com
+popup video
     {
     wait
     echo `url()`
