@@ -3,7 +3,7 @@
 
 https://bilibili.com
 
-echo `title()` `keyword`
+echo `url()` `title()` `keyword`
 type (//*[@id="nav_searchform"]/input) as [clear]`keyword`
 click (//*[@id="nav_searchform"]/div/button)
 
@@ -24,7 +24,7 @@ popup search.bilibili.com
     }
 
 wait 5
-popup video
+popup www.bilibili.com
     {
     wait
     echo `url()`
