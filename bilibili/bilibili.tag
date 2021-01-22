@@ -1,11 +1,18 @@
 //https://github.com/kelaberetiv/TagUI/blob/master/src/test/positive_test.tag
 //tagui bilibili.tag searchKeys.csv -q
 
-https://www.bilibili.com
+//https://www.bilibili.com
+
+//echo `keyword`
+//type (//*[@id="nav_searchform"]/input) as [clear]`keyword`
+//click (//*[@id="nav_searchform"]/div/button)
+
+https://search.bilibili.com
 
 echo `keyword`
-type (//*[@id="nav_searchform"]/input) as [clear]`keyword`
-click (//*[@id="nav_searchform"]/div/button)
+type search-keyword as [clear]`keyword`
+click (//*[@id="server-search-app"]/div/div[1]/div[1]/div/div/div/div[2])
+echo `title()`
 
 wait 5
 popup search.bilibili.com
