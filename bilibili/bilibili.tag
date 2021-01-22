@@ -10,9 +10,10 @@
 https://search.bilibili.com
 
 echo `keyword`
-type search-keyword as [clear]`keyword`
-click (//*[@id="server-search-app"]/div/div[1]/div[1]/div/div/div/div[2])
-echo `title()`
+type search-keyword as [clear]`keyword`[enter]
+echo `url()`
+click (//*[@id="server-search-app"]/div/div/div[2]/a)
+echo `url()`
 
 wait 5
 popup search.bilibili.com
