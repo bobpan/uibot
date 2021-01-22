@@ -17,8 +17,9 @@ popup search.bilibili.com
     for n from 1 to cntItm
         read (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/div/div[3]/span[3]) to upDate
         if upDate equal to "2020-01-10"
-            //read (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/a/div/span[1]) to tag_rb
-            click (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/div/div[1]/a)
+            read (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/a) to img-anchor
+            echo `img-anchor`
+            click (//*[@id="all-list"]/div[1]/div[2]/ul/li[`n`]/a)
             break
     }
 
