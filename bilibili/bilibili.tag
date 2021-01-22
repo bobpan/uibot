@@ -33,6 +33,6 @@ popup video
     wait 60
     js r = Math.ceil(Math.random()*60)
     echo `r`s
-    wait (`r` * 1.0)
+    wait `r` + 6.0
     //click (//*[@id="v_upinfo"]/div[2]/div[1]/a[1])
     }
